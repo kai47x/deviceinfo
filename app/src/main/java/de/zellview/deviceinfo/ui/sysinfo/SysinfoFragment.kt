@@ -12,18 +12,18 @@ import de.zellview.deviceinfo.R
 
 class SysinfoFragment : Fragment() {
 
-    private lateinit var slideshowViewModel: SysinfoViewModel
+    private lateinit var sysinfoViewModel: SysinfoViewModel
 
     override fun onCreateView(
             inflater: LayoutInflater,
             container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
-        slideshowViewModel =
+        sysinfoViewModel =
                 ViewModelProviders.of(this).get(SysinfoViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_slideshow, container, false)
         val textView: TextView = root.findViewById(R.id.text_slideshow)
-        slideshowViewModel.text.observe(viewLifecycleOwner, Observer {
+        sysinfoViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
         return root
