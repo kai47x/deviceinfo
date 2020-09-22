@@ -1,3 +1,3 @@
 # deviceinfo
 
-reading sysinfos as version, builtno etc.
+reading sysinfos eg adnroidversion, builtno etc.
